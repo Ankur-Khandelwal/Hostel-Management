@@ -1,0 +1,14 @@
+.card{
+  font-size: smaller;
+  margin-bottom: 20px;
+  width: 11rem;
+  border-radius: 10px;
+}
+
+.card-body h5{
+  font-size: 15px;
+}
+
+.card-body h6{
+  font-size: 12px;
+}

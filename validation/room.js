@@ -1,6 +1,5 @@
 const Validator = require("validator");
 const isEmpty = require("./is-empty");
-const mongoose = require("mongoose")
 
 const validateRoomInput = data => {
   const errors = {};

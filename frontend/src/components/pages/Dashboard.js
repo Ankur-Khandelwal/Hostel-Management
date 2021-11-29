@@ -34,7 +34,7 @@ class Dashboard extends Component {
             </div>
           </div>
 
-          <div className="card" style={{ width: "18rem", hover: '', height: '22rem' }}>
+          {/* <div className="card" style={{ width: "18rem", hover: '', height: '22rem' }}>
             <img src={bedRoom} className="card-img-top" alt="Cleaning" />
             <div className="card-body">
               <h5 className="card-title">Room Repair/Cleaning Status</h5>
@@ -42,7 +42,7 @@ class Dashboard extends Component {
                 Add Room Repair/Cleaning or Check Info
                 </a>
             </div>
-          </div>
+          </div> */}
 
           <div className="card" style={{ width: "18rem", hover: '', height: '22rem' }}>
             <img src={staff} className="card-img-top" alt="Cleaning" />

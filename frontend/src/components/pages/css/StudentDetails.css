@@ -1,0 +1,19 @@
+.details{
+  display: flex;
+  flex-direction: row;
+  height: 75.2vh;
+  justify-content: space-evenly;
+}
+
+.details form .row{
+  display: flex;
+  flex-direction: column;
+}
+
+.details label{
+  font-size: 12px;
+}
+
+h2{
+  text-align: center;
+}
