@@ -4,9 +4,8 @@ import { connect } from "react-redux";
 import { getCurrentUser } from "../../actions/authActions";
 
 
-// const clean = require("../../img/cleaning.jpg");
 const student = require("../../img/student.jpg");
-const staff = require("../../img/staff.jpeg");
+const staff = require("../../img/staff.jpg");
 const bedRoom = require("../../img/bedroom.jpeg");
 class Dashboard extends Component {
   componentDidMount() {
@@ -33,16 +32,6 @@ class Dashboard extends Component {
               </a>
             </div>
           </div>
-
-          {/* <div className="card" style={{ width: "18rem", hover: '', height: '22rem' }}>
-            <img src={bedRoom} className="card-img-top" alt="Cleaning" />
-            <div className="card-body">
-              <h5 className="card-title">Room Repair/Cleaning Status</h5>
-              <a href="/block">
-                Add Room Repair/Cleaning or Check Info
-                </a>
-            </div>
-          </div> */}
 
           <div className="card" style={{ width: "18rem", hover: '', height: '22rem' }}>
             <img src={staff} className="card-img-top" alt="Cleaning" />
