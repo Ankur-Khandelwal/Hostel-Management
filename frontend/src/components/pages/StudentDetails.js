@@ -5,6 +5,7 @@ import classnames from "classnames";
 import { createStudentDetails, getStudentDetails } from '../../actions/studentDetailsActions';
 import axios from "axios";
 import ReactLoading from 'react-loading';
+import './css/StudentDetails.css';
 
 class StudentDetails extends Component {
     constructor(props) {
@@ -58,11 +59,6 @@ class StudentDetails extends Component {
         await axios.put(`/api/student/availability`, { id, isAvailable: !isAvailable }).then(res => console.log(res)).catch(err => console.log(err));
         await this.props.getStudentDetails(this.props.match.params.id);
     }
-    UNSAFE_componentWillReceiveProps(nextProps) {
-        if (nextProps.errors) {
-            this.setState({ errors: nextProps.errors });
-        }
-    }
     async componentDidMount() {
         await this.props.getStudentDetails(this.props.match.params.id);
     }
@@ -102,9 +98,9 @@ class StudentDetails extends Component {
         ) : null
         const { errors } = this.state;
         return (
-            <div className="mid container">
-                <h1>{this.state.batch}</h1>
-                <br />
+            <>
+            <h2>{this.state.batch}</h2>
+            <div className="container details">
                 <form onSubmit={this.onSubmit}>
                     <div className="row">
                         <div className="col">
@@ -197,7 +193,7 @@ class StudentDetails extends Component {
                         </div>
                     </div>
                 </form>
-                <div style={{ marginTop: '50px', overflow: 'scroll', maxHeight: 800 }}>
+                <div style={{ marginTop: '30px', maxHeight: 800 }}>
                     {!loading ? <table className="table table-striped table-hover">
                         <thead className="thead-dark">
                             <tr>
@@ -215,9 +211,10 @@ class StudentDetails extends Component {
                         <tbody>
                             {tableContent}
                         </tbody>
-                    </table> : <div style={{ display: 'flex', justifyContent: 'center' }}><ReactLoading type="bars" color="#f56f42" /></div>}
+                    </table> : <div style={{ display: 'flex', justifyContent: 'center' }}><ReactLoading type="balls" color="blue" /></div>}
                 </div>
             </div>
+            </>
         );
     }
 }

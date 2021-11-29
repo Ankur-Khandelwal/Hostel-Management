@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import classnames from "classnames";
 import { connect } from "react-redux";
 import { registerUser } from "../../actions/authActions";
-
+import "./Register.css";
 class Register extends Component {
   constructor() {
     super();
@@ -54,31 +54,29 @@ class Register extends Component {
 
     return (
       <div className="register mid container">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-8 m-auto">
-              <h1 className="display-4 text-center">Sign Up</h1>
-              <p className="lead text-center">Create your account</p>
-              <form noValidate onSubmit={this.onSubmit}>
-                <div className="form-group">
+        <div className="container Signupouter">
+          <div className="row ">
+          
+            <div className="col-md-4 m-auto Signupinner">
+            <img class="center" src="https://i.ibb.co/gb1X9Qf/filename.png" alt="logo" width="62" height="62"/>
+              <h2 className="display-6 text-center">Sign Up</h2>
+              <h1 class="lead text-center">Create Your Account</h1>
+              <form className=" signupForm" noValidate onSubmit={this.onSubmit}>
+                <div class="form-group" >
                   <input
                     type="text"
-                    className={classnames("form-control form-control-lg", {
-                      "is-invalid": errors.name
+                    className={classnames("form-control", {
+                      "is-invalid": errors.text
                     })}
                     placeholder="User Name"
                     name="name"
                     value={this.state.name}
                     onChange={this.onChange}
                   />
-                  {errors.name && (
-                    <div className="invalid-feedback">{errors.name}</div>
-                  )}
-                </div>
-                <div className="form-group">
+
                   <input
                     type="email"
-                    className={classnames("form-control form-control-lg", {
+                    className={classnames("form-control", {
                       "is-invalid": errors.email
                     })}
                     placeholder="Email Address"
@@ -89,11 +87,11 @@ class Register extends Component {
                   {errors.email && (
                     <div className="invalid-feedback">{errors.email}</div>
                   )}
-                </div>
-                <div className="form-group">
+                
+
                   <input
                     type="password"
-                    className={classnames("form-control form-control-lg", {
+                    className={classnames("form-control", {
                       "is-invalid": errors.password
                     })}
                     placeholder="Password"
@@ -104,11 +102,10 @@ class Register extends Component {
                   {errors.password && (
                     <div className="invalid-feedback">{errors.password}</div>
                   )}
-                </div>
-                <div className="form-group">
+
                   <input
                     type="password"
-                    className={classnames("form-control form-control-lg", {
+                    className={classnames("form-control", {
                       "is-invalid": errors.password2
                     })}
                     placeholder="Confirm Password"
@@ -119,8 +116,9 @@ class Register extends Component {
                   {errors.password && (
                     <div className="invalid-feedback">{errors.password2}</div>
                   )}
+                  <button class="btn btn-lg btn-primary btn-block btnInner" type="submit">Sign Up</button>
                 </div>
-                <input type="submit" className="btn btn-info btn-block mt-4" />
+                
               </form>
             </div>
           </div>

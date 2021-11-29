@@ -27,43 +27,12 @@ router.post('/', passport.authenticate('jwt', { session: false }), (req, res) =>
   const { errors, isValid } = validateRoomInput(req.body)
   if (!isValid) return res.status(400).json(errors)
 
-  // const { id, block, gender } = req.body
-
   const room = new Room(req.body)
 
   room.save()
     .then(data => res.json({ success: true, message: 'Room has been created.' }))
     .catch(err => res.status(400).json({ ...err, message: 'Error while creating room.' }))
 })
-
-// PUT
-// Assign a cleaner to a given room id
-// router.put('/incharge/:id', passport.authenticate('jwt', {session: false}), (req, res) => {
-//   const { errors, isValid } = validateCleanerInput(req.body)
-//   if(!isValid) return res.status(400).json(errors)
-
-//   const { incharge } = req.body;
-//   const { id } = req.params;
-
-//   Room.findOneAndUpdate(id, {$set: { incharge }})
-//     .then(data => res.json({success: true, message: 'Incharge has been updated.'}))
-//     .catch(err => res.status(400).json({...err, message: 'Failed to update the incharge'}))
-// })
-
-// Assign room to a studnet
-
-// router.put('/assign', passport.authenticate('jwt', {session: false}), (req, res) => {
-//   const { errors, isValid } = validateStudentInput(req.body)
-//   if(!isValid) return res.status(400).json(errors)  
-//   // studentIds is an array of college Ids and roomid is the room number
-//   const { studentIds, roomId } = req.body;
-//   Room.findOneAndUpdate({id: roomId}, { students: studentIds })
-//     .then(data => res.json({ success: true, message: 'Student has been added to the provided room.'}))
-//     .catch(err => res.json({...err, message: 'Failed to assign student to the room.'}))
-// })
-
-
-// DELETE 
 
 router.delete('/:_id', passport.authenticate('jwt', { session: false }), (req, res) => {
   const { _id } = req.params
