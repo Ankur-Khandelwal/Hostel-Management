@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { PropTypes } from "prop-types";
 import { connect } from "react-redux";
-
+import "./Home.css"
 class Home extends Component {
   componentDidMount() {
     if (this.props.auth.isAuthenticated) {
@@ -16,15 +16,21 @@ class Home extends Component {
           <div className="container">
             <div className="row">
               <div className="col-md-12 text-center">
-                <h1 className="display-3 mb-4">Hostel-Management</h1>
-                <p className="lead"></p>
-                <hr />
-                <Link to="/register" className="btn btn-lg btn-info mr-2">
-                  Sign Up
-                </Link>
-                <Link to="/login" className="btn btn-lg btn-light">
-                  Login
-                </Link>
+                <h1 className="display-3 mb-4">IIIT Hostel Management</h1>
+                <div class="outer">
+                  <div class="inner">
+                    New User ? Sign Up Now &nbsp;&nbsp;
+                    <Link to="/register" className="btn btn-lg btn-info mr-2" styles={{margin: "5%" , color: "#000000"}}>
+                      Sign Up
+                    </Link>
+                  </div>
+                  <div class="inner">
+                    Existing User ? Login Now &nbsp;&nbsp;
+                    <Link to="/login" className="btn btn-lg btn-light">
+                      Login
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

@@ -1,0 +1,22 @@
+.navbar {
+    background:rgba(0,0,0,1);
+    transition:0.3s;
+    padding:1%;
+  }
+  .nav-link, .navbar-brand span.iiit, .navbar-brand span.hostel {
+    transition:0.3s ease;
+  }
+  .navbar-brand:hover span.iiit {
+    color:#F18C21;
+  }
+  .navbar-brand:hover span.bh {
+    color:#ffffff;
+  }
+  .navbar-brand:hover span.hostel {
+    color:#009A66;
+  }
+
+  /* .container-fluid {
+    width:100%;
+    margin-right: 4px;
+  } */
