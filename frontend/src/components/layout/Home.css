@@ -1,0 +1,13 @@
+.inner{
+    position: relative;
+    padding: 15px;
+}
+.outer{
+    position: relative;
+    padding: 10px;
+    align-items: center;
+    margin-top:15%;
+    margin-left:30%; 
+    background-color: rgba(100, 100, 100, 0.6);
+    width:40%;
+}

@@ -1,9 +1,25 @@
 import React from "react";
+import "./footer.css";
 
 export default function Footer() {
   return (
-    <footer className="bg-dark text-white mt-5 pd-4 text-center">
-      Copyright &copy; {new Date().getFullYear()} <a href="https://github.com/starkblaze01/Hostel-Management#team-members">Team Web Tech</a>
+    <footer class="footer">
+
+      <div class="footer-copyright text-center py-3">© {new Date().getFullYear()} Copyright:
+         DEVELOPED BY GROUP-03  
+           <ul class="list-unstyled">
+          <li>
+            <a href="#!">ANKUR KHANDELWAL - B519010</a>
+          </li>
+          <li>
+            <a href="#!">ANMOL PANDA - B519011 </a>
+          </li>
+          <li>
+            <a href="#!">ANSUMAN MISHRA - B519012</a>
+          </li>
+        </ul>
+      </div>
+
     </footer>
   );
 }
