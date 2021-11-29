@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import classnames from "classnames";
 import { loginUser } from "../../actions/authActions";
-
+import "./Register.css";
 class Login extends Component {
   constructor() {
     super();
@@ -52,16 +52,17 @@ class Login extends Component {
 
     return (
       <div className="login mid container">
-        <div className="container">
+        <div className="container Signupouter">
           <div className="row">
-            <div className="col-md-8 m-auto">
-              <h1 className="display-4 text-center">Log In</h1>
-              <p className="lead text-center">Sign in to your account</p>
+            <div className="col-md-4 m-auto Signupinner">
+            <img class="center" src="https://i.ibb.co/gb1X9Qf/filename.png" alt="logo" width="62" height="62"/>
+              <h2 className="display-6 text-center">Log In</h2>
+              <h1 className="lead text-center">Sign in to your account</h1>
               <form onSubmit={this.onSubmit}>
                 <div className="form-group">
                   <input
                     type="email"
-                    className={classnames("form-control form-control-lg", {
+                    className={classnames("form-control", {
                       "is-invalid": errors.email
                     })}
                     placeholder="Email Address"
@@ -72,11 +73,10 @@ class Login extends Component {
                   {errors.email && (
                     <div className="invalid-feedback">{errors.email}</div>
                   )}
-                </div>
-                <div className="form-group">
+
                   <input
                     type="password"
-                    className={classnames("form-control form-control-lg", {
+                    className={classnames("form-control", {
                       "is-invalid": errors.password
                     })}
                     placeholder="Password"
@@ -87,8 +87,8 @@ class Login extends Component {
                   {errors.password && (
                     <div className="invalid-feedback">{errors.password}</div>
                   )}
+                  <button class="btn btn-lg btn-primary btn-block btnInner" type="submit">Log In</button>
                 </div>
-                <input type="submit" className="btn btn-info btn-block mt-4" />
               </form>
             </div>
           </div>
