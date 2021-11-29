@@ -90,9 +90,13 @@ class Staff extends Component {
             <div className="mid container">
                 <h1>{this.state.block}</h1>
                 <br />
+                <div className="row">
+                    <div className="col-md-3">
                 <form onSubmit={this.onSubmit}>
+                    
                     <div className="row">
-                        <div className="col">
+                        
+                        <div className="col-12">
                             <label htmlFor="name">Name</label>
                             <input type="text" id="name" placeholder="Name"
                                 className={classnames("form-control", {
@@ -106,7 +110,8 @@ class Staff extends Component {
                                 <div className="invalid-tooltip">{errors.name}</div>
                             )}
                         </div>
-                        <div className="col">
+                        <div className="col-12">
+                            <br/>
                             <label htmlFor="occupation">Occupation</label>
                             <input type="text" id="occupation" placeholder="Occupation"
                                 className={classnames("form-control", {
@@ -120,7 +125,8 @@ class Staff extends Component {
                                 <div className="invalid-tooltip">{errors.occupation}</div>
                             )}
                         </div>
-                        <div className="col">
+                        <div className="col-12">
+                        <br/>
                             <label htmlFor="mobile">Cellphone Number</label>
                             <input type="number" id="mobile" placeholder="Cellphone Number"
                                 className={classnames("form-control", {
@@ -138,9 +144,11 @@ class Staff extends Component {
                             <button type="submit" style={{ verticalAlign: '-39px' }} className="btn btn-primary">Add</button>
                         </div>
                     </div>
+                
                 </form>
-
-                <div style={{ marginTop: '50px', overflow: 'scroll', maxHeight: 800 }}>
+                </div>
+                <div className="col-md-9">
+                <div style={{ marginTop: '10px', overflow: 'hidden', maxHeight: 800 }}>
                     {!loading ? <table className="table table-striped table-hover">
                         <thead className="thead-dark">
                             <tr>
@@ -155,8 +163,10 @@ class Staff extends Component {
                         <tbody>
                             {tableContent}
                         </tbody>
-                    </table> : <div style={{ display: 'flex', justifyContent: 'center' }}><ReactLoading type="bars" color="#f56f42" /></div>}
+                    </table> : <div style={{ display: 'flex', justifyContent: 'center' }}><ReactLoading type="balls" color="#f56f42" /></div>}
                 </div>
+                </div>
+            </div>
             </div>
         );
     }
