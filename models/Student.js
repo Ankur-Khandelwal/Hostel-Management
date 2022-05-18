@@ -28,7 +28,7 @@ const StudentSchema = new Schema({
   },
   block: {
     type: String,
-    enum: ['A', 'B', 'C', 'D'],
+    enum: ['G', 'I', 'J', 'K', 'L', 'P', 'Q'],
     trim: true,
     required: true,
   },

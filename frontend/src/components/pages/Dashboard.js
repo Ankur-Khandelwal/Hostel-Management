@@ -17,31 +17,31 @@ class Dashboard extends Component {
   render() {
     const { user } = this.props.auth;
     return (
-      <div className="mid container">
+      <div className="mid container" style={{ display: 'flex', flexDirection: 'column' }}>
         <div className="text-center" style={{ fontSize: "25px" }}>
-          <h3>Welcome {user.name}!</h3>
+          <h3 style={{color: 'white'}}>Welcome {user.name}!</h3>
         </div>
-        <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '2rem' }}>
+        <div style={{ display: 'flex', justifyContent:'center', alignItems:'center', marginTop: '2rem' }}>
 
-          <div className="card hoverable" style={{ width: "30rem", hover: '', height: 'auto', border: '2px solid'}}>
+          <div className="card hoverable" style={{ width: "30rem", hover: '', height: '35rem', border: '2px solid'}}>
             <img src={student} className="card-img-top" alt="student" />
             <div className="card-body" style={{ height: '10rem' }}>
               <center><h5 className="card-title">Student</h5>
-              <p>Click below to Add new Student and alot Room or Check Info</p>
+              <p>Click below to manage Student Details</p>
               <a href="/student"  className="btn btn-primary">
-                Add
+                Student Management
               </a></center>
             </div>
           </div>
 
 
-          <div className="card" style={{ width: "30rem", hover: '', height: 'auto',border: '2px solid' }}>
+          <div className="card" style={{ width: "30rem", hover: '', height: '35rem',border: '2px solid' }}>
             <img src={staff} className="card-img-top" alt="staff" />
             <div className="card-body">
               <center><h5 className="card-title">Staff Info</h5>
-              <p>Click below to Add more Staff or Check their info</p>
+              <p>Click below to manage Student Details</p>
               <a href="/staff" className=" btn btn-primary">
-                Add 
+                Staff Management
               </a>
               </center>
             </div>

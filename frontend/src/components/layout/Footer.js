@@ -6,17 +6,17 @@ export default function Footer() {
     <footer class="footer">
 
       <div class="footer-copyright text-center py-3">© {new Date().getFullYear()} Copyright:
-         DEVELOPED BY GROUP-03  
+         {/* DEVELOPED BY GROUP-03   */}
            <ul class="list-unstyled">
           <li>
-            <a href="#!">ANKUR KHANDELWAL - B519010</a>
+            ANKUR KHANDELWAL
           </li>
-          <li>
+          {/* <li>
             <a href="#!">ANMOL PANDA - B519011 </a>
           </li>
           <li>
             <a href="#!">ANSUMAN MISHRA - B519012</a>
-          </li>
+          </li> */}
         </ul>
       </div>
 

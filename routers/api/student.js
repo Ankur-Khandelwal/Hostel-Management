@@ -25,10 +25,9 @@ router.post('/', passport.authenticate('jwt', { session: false }), (req, res) =>
       res.status(400).json({ error: 'Student with this id or email already exists.' })
     } else {
       const newStudent = new Student(req.body)
-
       newStudent.save()
         .then(student => res.json(student))
-        .catch(err => res.status(500).json({ error: 'Failed to save new student in the DB', err }))
+        .catch(err => res.status(500).json({ error: err, err }))
     }
   })
 

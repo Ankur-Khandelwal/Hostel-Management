@@ -145,7 +145,7 @@ class StudentDetails extends Component {
                                 <div className="invalid-tooltip">{errors.id}</div>
                             )}
                         </div>
-                        <div className="col">
+                        {/* <div className="col">
                             <label htmlFor="block">Block</label>
                             <input type="text" id="block" placeholder="Block"
                                 className={classnames("form-control", {
@@ -158,7 +158,7 @@ class StudentDetails extends Component {
                             {errors.block && (
                                 <div className="invalid-tooltip">{errors.block}</div>
                             )}
-                        </div>
+                        </div> */}
                         <div className="col">
                             <label htmlFor="room">Room No.</label>
                             <input type="text" id="room" placeholder="Room No."
@@ -171,6 +171,26 @@ class StudentDetails extends Component {
                             />
                             {errors.room && (
                                 <div className="invalid-tooltip">{errors.room}</div>
+                            )}
+                        </div>
+                        <div className="col">
+                            <label htmlFor="gen">Block</label>
+                            <select className={classnames("form-control", {
+                                "is-invalid": errors.block
+                            })}
+                                id="block" onChange={this.onChange} value={this.state.block}
+                                name="block"
+                            >   <option value="" defaultValue disabled>Select Block</option>
+                                <option value="G">G block</option>
+                                <option value="I">I block</option>
+                                <option value="J">J block</option>
+                                <option value="K">K block</option>
+                                <option value="L">L block</option>
+                                <option value="P">P block</option>
+                                <option value="Q">Q block</option>
+                            </select>
+                            {errors.block && (
+                                <div className="invalid-tooltip">{errors.block}</div>
                             )}
                         </div>
                         <div className="col">

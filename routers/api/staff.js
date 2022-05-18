@@ -18,7 +18,7 @@ router.post('/', passport.authenticate('jwt', { session: false }), (req, res) =>
   if (!isValid) return res.status(400).json(errors)
 
   const newStaff = new Staff(req.body)
-
+  
   newStaff.save()
     .then(data => res.json({ success: true, message: 'Staff has been saved.' }))
     .catch(err => res.json({ ...err, message: 'Failed to save staff' }))
